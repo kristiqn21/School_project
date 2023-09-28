@@ -1,0 +1,221 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{% static 'img/banner/popov.png' %}" type="image/png">
+    <title>Микропроцесори</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}">
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+
+<style>
+    /* Basic styles for the navbar */
+    .navbar-expand-lg .container {
+        max-width: 1500px; /* Adjust the max-width as needed */
+    }
+
+    .navbar-nav li.nav-item a.nav-link {
+        padding: 8px 5px; /* Adjust the padding as needed */
+    }
+
+    ul.navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        overflow: hidden;
+    }
+
+    li.nav-item {
+        float: left;
+    }
+
+    li.nav-item a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li.nav-item a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    /* Styles for the dropdown */
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    /* Style for the footer */
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 1px 0;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .nav-link .fas {
+        margin-left: 5px; /* Adjust the spacing as needed */
+        font-size: 18px; /* Default size */
+    }
+
+    /* Style for the icon when the dropdown is open */
+    .navbar-nav li.dropdown.show .fas {
+        transform: rotate(180deg); /* Rotate the arrow 180 degrees */
+    }
+
+    /* Style for the icon when the dropdown is closed */
+    .navbar-nav li.dropdown:not(.show) .fas {
+        transform: rotate(0deg); /* Rotate the arrow back to its default position */
+    }
+
+
+</style>
+
+<body>
+<header class="header_area">
+    <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static 'img/banner/load_cropped.png' %}" alt="Your Logo" width="80">
+                </a>
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Микропроцесор</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'processor' %}">Процесор</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'micro controller' %}">Микроконтролер</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'about page' %}">История</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                               role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Разрядност
+                                <i class="fas fa-caret-down"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{% url 'item1' %}">4 битови</a>
+                                <a class="dropdown-item" href="{% url 'item2' %}">8 битови</a>
+                                <a class="dropdown-item" href="{% url 'item3' %}">12 битови</a>
+                                <a class="dropdown-item" href="{% url 'item4' %}">16 битови</a>
+                                <a class="dropdown-item" href="{% url 'item5' %}">32 битови</a>
+                                <a class="dropdown-item" href="{% url 'item6' %}">64 битови</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Класификация
+                                <i class="fas fa-caret-down"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{% url 'universel page' %}">Универсални</a>
+                                <a class="dropdown-item" href="{% url 'builtin page' %}">Вградени системи</a>
+                                <a class="dropdown-item" href="{% url 'signal page' %}">Сигнални</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Памети в микропроцесора
+                                <i class="fas fa-caret-down"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{% url 'virtual page' %}">Виртуална памет</a>
+                                <a class="dropdown-item" href="{% url 'kesh page' %}">Кеш-памет</a>
+                                <a class="dropdown-item" href="{% url 'memory page' %}">Карта на паметта</a>
+                                <a class="dropdown-item" href="{% url 'pyramid page' %}">Пирамида на паметта</a>
+
+                            </div>
+                        </li>
+                        <!-- Add more menu items here -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    {% block content %}
+    {% endblock %}
+
+</main>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.navbar-nav li.dropdown').on('show.bs.dropdown', function () {
+            $('#arrow-icon').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+        });
+
+        $('.navbar-nav li.dropdown').on('hide.bs.dropdown', function () {
+            $('#arrow-icon').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+        });
+    });
+
+</script>
+
+<footer class="footer">
+    <p>&copy; 2023 Кристиян Цанков</p>
+</footer>
+</body>
+</html>

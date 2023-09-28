@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+{% block content %}
+
+    <style>
+        /* Your CSS rules go here */
+        .about_area {
+            padding: 100px 0;
+            background-color: #f8f8f8;
+        }
+
+        h1.text-uppercase {
+            font-size: 36px; /* Adjust the font size as needed */
+            font-weight: bold; /* You can change the font-weight if desired */
+            color: #333; /* You can change the color if desired */
+            z-index: 5000; /* Set a higher z-index value to ensure it's above the navbar */
+            position: relative; /* Ensure it respects the z-index value */
+            margin-top: 20px; /* Add some top margin to lower the h1 */
+        }
+
+        {#.about_img img {#}
+        {#    max-width: 100%;#}
+        {#    height: auto;#}
+        {#    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);#}
+        {#    border-radius: 10px; /* Add border-radius for a smoother image */#}
+        {
+        #}#}
+
+        .main_title h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Style for your h5 header */
+
+        .main_title p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .home_right_img img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px; /* Add border-radius for a smoother image */
+            margin-top: 150px; /* Add margin to lower the text */
+        }
+
+        .main_title h5 {
+            font-size: 18px; /* Adjust the font size as needed */
+            font-weight: normal; /* Change the font-weight if desired */
+            color: #666; /* You can change the color if desired */
+        }
+    </style>
+
+
+    <!--================ Start Home Banner Area =================-->
+
+    <section class="home_banner_area">
+        <div class="banner_inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="container">
+                            <h1 class="text-uppercase">Какво е Микроконтролер?</h1>
+                            <h5 class="">
+                                <p> Микроконтролерът е микрокомпютър затворен в единична
+                                интегрална схема, т.е. . микроконтролерът също е завършена
+                                    компютърна система.</p>
+                                Фактът, че всички компоненти са събрани в един чип,
+                                означава, че микроконтролерът е с по-ограничени ресурси и
+                                възможности в сравнение с един микрокомпютър.
+
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="home_right_img">
+                            <img class="" src="{% static 'img/microkontroller.png' %}" height="600" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+</html>

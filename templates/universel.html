@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+{% block content %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <style>
+            /* Container for your content */
+            .content-container {
+                max-width: 800px; /* Adjust the width as needed */
+                margin: 0 auto;
+                padding: 100px 20px; /* Adjust the top padding value to move the content lower */
+            }
+
+            /* Title style */
+            h1 {
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            /* Paragraph style */
+            p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            img {
+                max-width: 200%;
+                height: auto;
+                display: block;
+                margin: auto;
+                border: 2px solid #ccc;
+                border-radius: 40px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: border-color 0.3s, transform 0.3s; /* Add transition effect */
+            }
+
+            img:hover {
+                border-color: #007bff; /* Change border color on hover */
+                transform: scale(1.05); /* Increase size on hover */
+            }
+        </style>
+    </head>
+    <body>
+    <div class="content-container">
+        <h1>Универсални микропроцесори</h1>
+        <p>Микропроцесорите с общо предназначение са универсални високопроизводителни ИС, способни да изпълнят широк
+            кръг от
+            задачи, които не зависят от програмния език. Едни от техните главни приложения са в компютърните системи.
+            Компютърът
+            като мощна работна станция или персонална система, за разлика от микрокомпютъра, изисква работа с широк клас
+            програми от най-различно естество, сложност и обем. Това предполага:
+        </p>
+
+        <p>Голяма производителност – MIPS >> 1000;
+            Вътрешна тактова честота от порядъка на няколко гигахерца;
+            Висока разредност на системата – 32, 64, 128 битова;
+            Голям обем на адресното пространство, например при 40 битова адресация, достъпът да е над 1000 GB адреса;
+            Голям обем на енергонезависимата памет – стотици и хиляди гигабайта, съхраняване във външна програмна памет
+            – HD,
+            CD, Flash;
+            Голям обем на оперативната памет (RAM) – за гигабайтовия обхват са необходими външни RAM модули.
+            Възможност за оперативна работа в реално време и с всякакви сложни сигнали (аудио и видео) и с периферни
+            устройства
+            – аудио, видео и мултимедийни контролери със съответното програмно осигуряване.
+        </p>
+    </div>
+        <img src="{% static 'img/universal.png' %}" alt="">
+    </body>
+{% endblock %}
+</html>

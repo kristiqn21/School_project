@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+{% block content %}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="{% static 'img/favicon-32x32.png' %}" type="image/png">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}">
+        <!-- main css -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+
+
+
+    <!--================ Start About Us Area =================-->
+    <section class="about_area section_gap">
+        <div class="container">
+            <div class="row justify-content-start align-items-center">
+                <div class="col-lg-5">
+                    <div class="about_img">
+                        <img class="" src="{% static 'img/banner/220_cropped.png' %}" height="500" alt="">
+                    </div>
+                </div>
+
+                <div class="offset-lg-1 col-lg-5">
+                    <div class="main_title text-left">
+                        <h2>История</h2>
+                        <p>
+                            Преди появата на микропроцесорите компютрите се състоят от цели шкафове, често с регулирана
+                            температура, с отделни печатни платки с обемен и повърхностен монтаж. Появата на интегрални
+                            схеми с постепенно нарастваща степен на интеграция позволява постепенно намаляване на
+                            броя и размера на платките и заеманото пространство, като в днешно време има дори
+                            едноплаткови компютри. Микропроцесорите се прилагат повсеместно, от вградените системи през
+                            мейнфрейм компютрите до суперкомпютрите.
+                        <p>
+                            Първият микропроцесор Intel 4004 се появява на пазара през 1971 година в резултат на
+                            съвместна разработка на калкулатор между фирмите Intel и Busicom. Той е 4-битов, т.е.
+                            данните, които обработва, са представени като 4-битови думи, работи с максимална тактова
+                            честота 740 kHz, поддържа 46 команди и е част от микропроцесорна система с още 3 периферни
+                            интегрални схеми.
+                        </p>
+
+                        <p>
+                            Постепенно биват разработени и 8-, 16-, 32- и 64-битови микропроцесори, а в последните
+                            години и такива с повече от едно микропроцесорно ядро.
+                        </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+<!--================ End About Us Area =================-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>

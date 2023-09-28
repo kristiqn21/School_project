@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+{% block content %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>32 битови</title>
+        <style>
+            /* Container for your content */
+            .content-container {
+                max-width: 800px; /* Adjust the width as needed */
+                margin: 0 auto;
+                padding: 100px 20px; /* Adjust the top padding value to move the content lower */
+            }
+
+            /* Title style */
+            h1 {
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            /* Paragraph style */
+            p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: auto;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: border-color 0.3s, transform 0.3s; /* Add transition effect */
+            }
+
+            img:hover {
+                border-color: #007bff; /* Change border color on hover */
+                transform: scale(1.05); /* Increase size on hover */
+            }
+        </style>
+
+    </head>
+    <body>
+    <div class="content-container">
+        <h1>32 битови</h1>
+        През 1985 г. се появява първият 32-битов микропроцесор i80386. Той съдържа 275 000 транзистора и е изработен по
+        1,5
+        микронна технология. Има 32-битова шина за данни и адреси, а адресируемата физическа памет достига 4 GB.
+        Усъвършенстван
+        е защитеният режим на работа и се въвежда странициране на паметта. Аритметичният копроцесор i80387 е
+        предназначен за
+        обработка на данни с плаваща запетая. Като междинна версия е разработен вариант с 16-битова шина (адресируема
+        памет 16
+        МВ) i80386SX, който е предназначен за замяна на процесорите i80286 в компютрите от типа IBM PC/AT. На основата
+        на i80386
+        се появяват първите версии на операционната система Windows и нейните приложения.
+    </div>
+        <img src="{% static 'img/32.png' %}" alt="32-битов процесор">
+    </body>
+{% endblock %}
+</html>

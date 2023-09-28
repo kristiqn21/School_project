@@ -1,0 +1,38 @@
+/* Add your custom CSS rules here */
+.about_area {
+    padding: 100px 0;
+    background-color: #f8f8f8;
+}
+
+.about_img img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.main_title h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.main_title p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Target the header inside the text block */
+.main_title h5 {
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold; /* You can change the font-weight if desired */
+    color: #333; /* You can change the color if desired */
+}
+
+/* Target the paragraph inside the text block */
+.main_title p {
+    font-size: 16px; /* Adjust the font size as needed */
+    line-height: 1.4; /* You can adjust the line height if desired */
+    color: #666; /* You can change the color if desired */
+}

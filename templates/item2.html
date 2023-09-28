@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+{% block content %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>8 битови</title>
+        <style>
+            /* Container for your content */
+            .content-container {
+                max-width: 800px; /* Adjust the width as needed */
+                margin: 0 auto;
+                padding: 100px 20px; /* Adjust the top padding value to move the content lower */
+            }
+
+            /* Title style */
+            h1 {
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            /* Paragraph style */
+            p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: auto;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: border-color 0.3s, transform 0.3s; /* Add transition effect */
+            }
+
+            img:hover {
+                border-color: #007bff; /* Change border color on hover */
+                transform: scale(1.05); /* Increase size on hover */
+            }
+        </style>
+    </head>
+    <body>
+    <div class="content-container">
+        <h1>8 битови</h1>
+        През 1972 г. Intel пуска в продажба процесора i8008, който първоначално работи на честота 200 KHz и притежава
+        8-битова
+        шина за данни. През 1974 се появява и 8-битовият процесор i8080, с който се конструират терминали, контролери и
+        смятаният за първи персонален компютър Altair. Процесорът има 6000 транзистора, изработван е по 6 микронна
+        технология, с
+        тактова честота 2 MHz и може да адресира 64 КВ памет. Този микропроцесор в продължение на почти цяло десетилетие
+        е
+        световен стандарт сред 8-битовите микропроцесори.
+    </div>
+    <img src="{% static 'img/8.png' %}" alt="8-битов процесор">
+    </body>
+{% endblock %}
+</html>

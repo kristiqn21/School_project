@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+{% block content %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <style>
+            /* Container for your content */
+            .content-container {
+                max-width: 800px; /* Adjust the width as needed */
+                margin: 0 auto;
+                padding: 100px 20px; /* Adjust the top padding value to move the content lower */
+            }
+
+            /* Title style */
+            h1 {
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            /* Paragraph style */
+            p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: auto;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: border-color 0.3s, transform 0.3s; /* Add transition effect */
+            }
+
+            img:hover {
+                border-color: #007bff; /* Change border color on hover */
+                transform: scale(1.05); /* Increase size on hover */
+            }
+        </style>
+    </head>
+    <body>
+    <div class="content-container">
+        <h1>Сигнални процесори</h1>
+        <p>Цифровите сигнални процесори (на английски: Digital Signal Processor, DSP) са самостоятелен клас
+            микропроцесори.
+            Използват се във вградени системи със специализирано предназначение, изискващи бърза и сложна обработка на
+            сигнали, много често в реално време. Обработката включва ограничен брой математически операции като
+            събиране,
+            умножение над многоразредни числа с фиксирана и плаваща запетая. Тя е необходима например за сложни
+            многоцветни
+            видеоизображения, качествени предаване на звук, във всички съвременни медицински електронни системи, за
+            сложни
+            научни изследвания и други.
+        </p>
+
+        <p>Сигналните процесори изискват:</p>
+        <p>
+            разредност 16/32/64 бита;
+            тактови честоти в мегахерцовия до гигахерцовия обхват;
+            вграден високо разреден аналогово-цифров преобразувател;
+            много бърз аритметично–логически блок;
+            висока ефективност, често измервана с единицата GFLOPS (Гигафлопс) – милиард аритметични операции с плаваща
+            запетая за секунда, скорост – съизмерима със скоростта на мощните съвременни универсални микропроцесори;
+            енергонезависими и RAM памети, които могат да бъдат вградени в обема на системата или чипа;
+        </p>
+    </div>
+                <img src="{% static 'img/signal.png' %}" alt="">
+    </body>
+{% endblock %}
+</html>

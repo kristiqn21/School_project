@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+{% block content %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>16 битови</title>
+        <style>
+            /* Container for your content */
+            .content-container {
+                max-width: 800px; /* Adjust the width as needed */
+                margin: 0 auto;
+                padding: 95px 20px; /* Adjust the top padding value to move the content lower */
+            }
+
+            /* Title style */
+            h1 {
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            /* Paragraph style */
+            p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: auto;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: border-color 0.3s, transform 0.3s; /* Add transition effect */
+            }
+
+            img:hover {
+                border-color: #007bff; /* Change border color on hover */
+                transform: scale(1.05); /* Increase size on hover */
+            }
+        </style>
+    </head>
+    <body>
+    <div class="content-container">
+        <h1>16 битови</h1>
+        Intel пуска първия 16-битов процесор i8086 през 1978 година. Той е родоначалник на знаменитото семейство Intel
+        80х86
+        . Архитектурата на този процесор се отличава значително от архитектурата на 8-битовите
+        микропроцесори, ориентирани към решаване на задачи, изискващи относително малък брой изчислителни операции. В
+        Intel
+        8086
+        са реализирани голям набор команди и методи за адресация на паметта и е обезпечена ефективна обработка на
+        прекъсванията.
+        Той работи с честота 5 MHz, има производителност 0,33 MIPS, изработен е по 3 микронна технология и има 29 000
+        транзистора. Процесорът има 20-битова адресна шина и 16-битова шина за данни. Адресируемата памет е 1 МВ,
+        регистровата
+        архитектура и системата от команди съществено се отличават от предшественика i8085, но общите идеи на
+        концепцията на
+        фирмата се запазват. Наред с основния микропроцесор е разработен и аритметичен копроцесор i8087, който се
+        включва
+        към
+        i8086 за изпълнение на операции с числа с плаваща запетая (напр. при изчисленията на тригонометрични,
+        логаритмични и
+        други математически функции)[4]. На следващата година се появява i8088 – същият микропроцесор, но с 8-битова
+        шина за
+        данни. С него започва историята на най-популярните компютърни системи IBM PC. През целия период на развитие на
+        IBM
+        PC
+        компютрите, Intel е неразривно свързан с това развитие, докато самата IBM има доста по-малко участие в него.
+    </div>
+    <img src="{% static 'img/16.png' %}" alt="16-битов процесор">
+    </body>
+{% endblock %}
+</html>

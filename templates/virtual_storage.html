@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+{% block content %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <style>
+            /* Container for your content */
+            .content-container {
+                max-width: 800px; /* Adjust the width as needed */
+                margin: 0 auto;
+                padding: 100px 20px; /* Adjust the top padding value to move the content lower */
+            }
+
+            /* Title style */
+            h1 {
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            /* Paragraph style */
+            p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: auto;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: border-color 0.3s, transform 0.3s; /* Add transition effect */
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+    <div class="content-container">
+        <h1>Виртуална памет</h1>
+        <p>Всяка програма изисква определено адресно пространство в главната памет. При съвместна работа на няколко
+            програми, необходимото общо адресно пространство се ограничава от обема на физическата RAM памет. За
+            решаване на
+            проблема, особено при по-рядко използвани програми, на помощ идва техниката на виртуалната памет (Virtual
+            Memory
+            VM), която се изразява в следното:</p>
+        <img src="{% static 'img/virtual2.png' %}" alt="">
+
+        Вътрешна програма, част от операционната система, автоматично намира допълнително свободно адресно пространство
+        на твърдия диск, известно като Backing store. В тази поддържаща област съхранените данни имат виртуални
+        (логически) адреси, неизвестни на програмиста. Когато ще се работи с програма, съхранена във виртуалната област,
+        специална програма автоматично трансформира обратно данните от виртуалната памет във физическото пространство с
+        реални адреси. Цялата процедура е известна като mapping, а самото копиране от виртуалната памет в главната е
+        swapping или paging (страниране). Програмистът не се интересува къде са били разположени програмите във
+        виртуалната област върху твърдия диск. За целта е необходимо в диска да има достатъчно свободно пространство.
+    </div>
+    </body>
+{% endblock %}
+</html>

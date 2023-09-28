@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+{% block content %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <style>
+            /* Container for your content */
+            .content-container {
+                max-width: 800px; /* Adjust the width as needed */
+                margin: 0 auto;
+                padding: 100px 20px; /* Adjust the top padding value to move the content lower */
+            }
+
+            /* Title style */
+            h1 {
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            /* Paragraph style */
+            p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            img {
+                max-width: 200%;
+                height: auto;
+                display: block;
+                margin: auto;
+                border: 2px solid #ccc;
+                border-radius: 40px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: border-color 0.3s, transform 0.3s; /* Add transition effect */
+            }
+
+            img:hover {
+                border-color: #007bff; /* Change border color on hover */
+                transform: scale(1.05); /* Increase size on hover */
+            }
+        </style>
+    </head>
+    <body>
+    <div class="content-container">
+        <h1>Вградени системи</h1>
+        <p>Вградените микрокомпютърни системи са предназначени за вграждане в състава на по-голяма електронна система и
+            се
+            програмират обикновено еднократно, а задачите им са точно определени. Пример за вградени системи са тези за
+            транспортните средства, за мобилните телефони, за телевизионните цели, за битовата бяла техника, в
+            периферната
+            компютърна техника като: принтери, скенери, камери и много други.
+        </p>
+        <p>
+            Микроконтролери
+            Микроконтролерите се използват за управление на цифрови системи с конкретно предназначение, с постоянно
+            действаща програма, записана в постоянната памет. В преобладаващата част от приложенията те изискват
+            следните
+            параметри:
+        </p>
+        <p>
+            8 или 16 битова организация – 16 битова адресна шина;
+            тактова честота до 40 MHz;
+            вградена програмна памет – ROM, EEPROM, Flash ROM с обем до няколкостотин килобайта(KB);
+            голяма универсалност – в чипа да са вградени допълнителни подсистеми, разширяващи функционалните
+            способности;
+            Чипът на микроконтролера съдържа до няколко десетки хиляди транзистора и масовото му производство е евтино,
+            а
+            крайната цена е много ниска. С този клас микропроцесори могат да се конструират компактни електронни
+            управляващи
+            устройства без други ИС и изискващи минимален брой външни елементи.
+        </p>
+    </div>
+    <img src="{% static 'img/microcontroler.png' %}" alt="">
+    </body>
+{% endblock %}
+</html>
